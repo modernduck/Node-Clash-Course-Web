@@ -1,0 +1,22 @@
+{
+  "name": "node2",
+  "version": "1.0.0",
+  "description": "use this https://docs.google.com/document/d/1pi4tZpTy7E2mF4MzPM98PpdzBsSHWzzMLlKzo0ZaUUI/edit?usp=drive_web&ouid=102713357501559828848",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modernduck/Node-Clash-Course-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modernduck/Node-Clash-Course-Web/issues"
+  },
+  "homepage": "https://github.com/modernduck/Node-Clash-Course-Web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
