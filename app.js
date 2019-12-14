@@ -1,0 +1,3 @@
+function onClicked(){
+    alert("Hi");
+}
