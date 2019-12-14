@@ -1,5 +1,7 @@
 const express = require('express')
 const path = require('path');
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'key4WtzwPN5lF6r5X'}).base('appkcXnuIjeOWvpTG');
 const app = express()
 const port = 3000
 var counter = 0;
@@ -19,6 +21,29 @@ app.get('/', (req, res) => {
 
 
 app.post('/sompop', (req,res)=> {
+
+
+    base('Form').create([
+        {
+          "fields": {
+            "First Name": req.body.firstName,
+            "Last Name": req.body.lastName,
+            "ID": req.body.citizenId,
+            "Date": req.body.createDate,
+            "Type": req.body.accidentType
+          }
+        }
+      ], function(err, records) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        records.forEach(function (record) {
+          console.log(record.getId());
+        });
+      });
+
+
     return res.send(`<h1>K ${req.body.firstName} ${req.body.lastName} (POST) </h1>
     <p>Thank you for submiting form</p>
     `);
